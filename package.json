@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tsung Hung",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/masterfung/Simple-Node",
+  "readme": "./README.md",
+  "dependencies": {
+    "jsonfile": "^2.0.0"
+  }
 }

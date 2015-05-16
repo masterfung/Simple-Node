@@ -8,12 +8,9 @@ var Contact = {
 	    return num;
     },
         createContact: function(str) {
-            var arrayed = str.split(',');
-            var name = arrayed[0].trim();
-	    var num = arrayed[1].trim();
             return {
-		name: name,
-		number: num
+		name: this.parseName(str),
+		number: this.parseNumber(str)
         }
     }
 };
