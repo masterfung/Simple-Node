@@ -1,6 +1,7 @@
 var MyParrot = require('./parrot');
 var Contact = require('./contact');
 var Command = require('./command');
+var Util = require('./util');
 
 var contacts = [{
     "name": "Jane Doe",
@@ -55,3 +56,9 @@ var contact = { name: 'Jim Carry', number: '222-622-9022' };
 Command.find(function(err, results) {
   console.log('Result Found!')
 })
+
+var home = Util.getHomeDirectory();
+var path = Util.getDataPath();
+
+console.log(home);
+console.log(path);
