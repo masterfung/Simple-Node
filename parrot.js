@@ -5,4 +5,4 @@ var Parrot = {
 		return 'Ola!'}
 };
 
-module.exports =  Parrot
+module.exports =  Parrot;
