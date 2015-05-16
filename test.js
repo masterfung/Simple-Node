@@ -17,9 +17,13 @@ Contact.loadContacts(function(err, data) {
 });
 
 Contact.saveContacts(contacts, function (err) {
-  console.log('Success!')
+  console.log('Success!');
 })
 
 Contact.saveContact(contact, function(err) {
-  console.log('Wonderfully written sir!')
+  console.log('Wonderfully written sir!');
+})
+
+Contact.findContacts('Jane Doe', function (err, data) {
+  console.log(data);
 })

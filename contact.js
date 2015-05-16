@@ -39,6 +39,18 @@ var Contact = {
 			this.saveContacts(contacts, done)
 		}.bind(this))
 
+	},
+
+	findContacts: function (name, done) {
+		this.loadContacts(function (err, contacts) {
+			if (err) {return done(err)}
+			var foundContacts = contacts.filter(function(contact) {
+				return contact.name == name
+			})
+
+			done(null, foundContacts)
+		})
+
 	}
 }
 
