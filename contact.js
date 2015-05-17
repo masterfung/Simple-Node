@@ -19,7 +19,10 @@ var Contact = {
 
 	loadContacts: function(done){
 		var jsonfile = require('jsonfile');
-		jsonfile.readFile('data.json', function(err, data) {
+		var Util = require('./util');
+		var pathFile = Util.getDataPath();
+		console.log(pathFile);
+		jsonfile.readFile(pathFile, function(err, data) {
 			done(err, data)
 		})
 
@@ -27,7 +30,9 @@ var Contact = {
 
 	saveContacts: function(contacts, done) {
 		var jsonfile = require('jsonfile');
-		jsonfile.writeFile('data.json', contacts, function (err, data) {
+		var Util = require('./util');
+		var pathFile = Util.getDataPath();
+		jsonfile.writeFile(pathFile, contacts, function (err, data) {
 			done(err, data)
 		})
 	},
