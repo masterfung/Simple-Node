@@ -14,7 +14,6 @@ var Contact = {
 				name: this.parseName(str),
 				number: this.parseNumber(str)
 			}
-
   },
 
 	loadContacts: function(done){
@@ -25,7 +24,6 @@ var Contact = {
 		jsonfile.readFile(pathFile, function(err, data) {
 			done(err, data)
 		})
-
 	},
 
 	saveContacts: function(contacts, done) {
@@ -50,7 +48,7 @@ var Contact = {
 		this.loadContacts(function (err, contacts) {
 			if (err) {return done(err)}
 			var foundContacts = contacts.filter(function(contact) {
-				return contact.name == name
+				return contact.name == nam
 			})
 
 			done(null, foundContacts)

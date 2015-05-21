@@ -4,8 +4,7 @@ var Util = {
   },
   getDataPath: function() {
     var path = require('path');
-    var fs = require('fs');
-    return path.join(__dirname, "/data.json");
+    return path.join(this.getHomeDirectory(), "data.json");
   }
 };
 
